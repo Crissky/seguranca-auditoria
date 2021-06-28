@@ -1,0 +1,14 @@
+# https://www.cyberciti.biz/tips/linux-unix-bsd-nginx-webserver-security.html
+
+
+#3: Linux /etc/sysctl.conf Hardening
+#4.final: turn off nginx version number displayed on all auto generated error pages
+#8: Controlling Buffer Overflow Attacks
+#9: Control Simultaneous Connections
+#10: Allow Access To Our Domain Only
+#11: Limit Available Methods
+#12: How Do I Deny Certain User-Agents?
+
+
+TODO
+https://www.cyberciti.biz/tips/linux-unix-bsd-nginx-webserver-security.html#:~:text=%2313%3A%20How%20Do%20I%20Stop%20Image%20Hotlinking%3F

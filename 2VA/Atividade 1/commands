@@ -1,0 +1,32 @@
+https://www.cyberciti.biz/tips/linux-unix-bsd-nginx-webserver-security.html
+
+https://www.acunetix.com/blog/web-security-zone/hardening-nginx/
+
+
+https://sempreupdate.com.br/melhores-praticas-de-seguranca-para-o-nginx-web-server/
+
+/usr/local/nginx/conf/ ou /etc/nginx/ – Diretório de configuração do Nginx
+/usr/local/nginx/conf/nginx.conf – Principal arquivo de configuração
+/usr/local/nginx/html/ ou /var/www/html – Localização padrão dos arquivos
+/usr/local/nginx/logs/ ou /var/log/nginx – Localização padrão dos logs
+Porta HTTP padrão: TCP 80
+Porta HTTPS padrão: TCP 443
+
+####################### COMANDOS #######################
+
+# INICIANDO O NGINX COM O DOCKER 
+docker run -it my-ubuntu bash
+docker run -it -p 8080:80 my-ubuntu bash
+
+# TESTANDO ARQUIVO DE CONFIGURAÇÃO
+nginx -t
+
+# CARREGAR MUDANÇAS DE CONFIGURAÇÃO
+nginx -s reload
+
+# PARAR O SERVIDOR
+nginx -s stop
+
+# Teste se o nginx não está mais mostrando a versão no header com a adição de "server_tokens   off;" no arquivo nginx.conf
+curl -I http://localhost:8080/
+

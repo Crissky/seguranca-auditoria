@@ -1,0 +1,13 @@
+# mongodb+srv://admin:123456@localhost/?retryWrites=true&w=majority
+# mongodb+srv://usuario_1:<password>@cluster0.4czrq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+version: '3'
+
+services:
+    my-ubuntu:
+        image: my-ubuntu:latest
+        container_name: my-ubuntu
+        restart: always
+        ports:
+            - 8080:80
+        expose:
+            - 80
