@@ -1,0 +1,48 @@
+"""Com base no link abaixou ou outro a sua escolha e cria uma CA e
+emita um certificado em seu nome. Devem ser anexados os arquivos e
+comandos utilizados.
+"""
+
+Sugerido: https://qastack.com.br/superuser/126121/how-to-create-my-own-certificate-chain
+
+Usado: https://www.devmedia.com.br/gerando-um-certificado-digital-proprio/31506
+
+##############################   COMANDOS   ##################################
+
+"""Este comando gera uma chave rsa de 4096 bits,
+armazena a chave no arquivo ca.key e
+protege este arquivo cifrando-o com o 3DES.
+"""
+
+$ genrsa -des3 -out ca.key 4096
+
+
+"""Após isso devemos gerar um certificado x509
+que será válido por 10 anos (3650 dias)
+que conterá a chave pública do arquivo ca.key
+e será armazenado no arquivo ca.crt.
+"""
+
+$ req -new -x509 -days 3650 -key ca.key -out ca.crt
+
+
+"""Após gerarmos o certificado raiz
+podemos gerar um certificado de um servidor.
+Para isso devemos executar o comando abaixo"""
+
+$ genrsa -des3 -out server.key 4096
+
+
+"""A seguir faremos uma requisição
+de certificado (server.csr)
+"""
+
+$ req -new -key server.key -out server.csr
+
+
+"""Feito isso devemos assinar o certificado
+com o certificado raiz.
+Para isso devemos utilizar o comando abaixo:
+"""
+
+$ x509 -req -days 365 -in server.csr -CA ca.crt -CAkey ca.key -set_serial 10102014 -out server.crt
