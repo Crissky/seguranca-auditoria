@@ -4,6 +4,7 @@ version: '3'
 
 services:
     my-ubuntu:
+        build: .
         image: my-ubuntu:latest
         container_name: my-ubuntu
         restart: always
