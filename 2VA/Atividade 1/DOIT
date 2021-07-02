@@ -2,7 +2,7 @@
 
 
 #3: Linux /etc/sysctl.conf Hardening
-#4.final: turn off nginx version number displayed on all auto generated error pages
+#4.(Optional) Change Nginx Version Header & final: turn off nginx version number displayed on all auto generated error pages
 #8: Controlling Buffer Overflow Attacks
 #9: Control Simultaneous Connections
 #10: Allow Access To Our Domain Only
