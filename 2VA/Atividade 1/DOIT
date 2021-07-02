@@ -8,7 +8,11 @@
 #10: Allow Access To Our Domain Only
 #11: Limit Available Methods
 #12: How Do I Deny Certain User-Agents?
-
+#12: How Do I Block Referral Spam?
+#13: How Do I Stop Image Hotlinking?
+#22 : Avoid clickjacking
+#23 : Disable content-type sniffing on some browsers
+#23 : Enable the Cross-site scripting (XSS) filter
 
 TODO
 https://www.cyberciti.biz/tips/linux-unix-bsd-nginx-webserver-security.html#:~:text=%2313%3A%20How%20Do%20I%20Stop%20Image%20Hotlinking%3F
