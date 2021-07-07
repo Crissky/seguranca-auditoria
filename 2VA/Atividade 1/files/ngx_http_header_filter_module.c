@@ -45,7 +45,7 @@ ngx_module_t  ngx_http_header_filter_module = {
     NGX_MODULE_V1_PADDING
 };
 
-
+/* MINHAS MUDANAÇAS */
 static u_char ngx_http_server_string[] = "Server: Ninja Web Server" CRLF;
 static u_char ngx_http_server_full_string[] = "Server: Ninja Web Server" CRLF;
 static u_char ngx_http_server_build_string[] = "Server: " NGINX_VER_BUILD CRLF;
