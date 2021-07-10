@@ -14,5 +14,9 @@
 #23 : Disable content-type sniffing on some browsers
 #23 : Enable the Cross-site scripting (XSS) filter
 
-TODO
-https://www.cyberciti.biz/tips/linux-unix-bsd-nginx-webserver-security.html#:~:text=%2313%3A%20How%20Do%20I%20Stop%20Image%20Hotlinking%3F
+
+### 
+docker run -it --sysctl net.ipv4.conf.all.rp_filter=1 my-ubuntu bash
+
+sysctl net.ipv4.conf.all.rp_filter
+###
