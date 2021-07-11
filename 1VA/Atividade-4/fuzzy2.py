@@ -12,7 +12,7 @@ badchars = (
 )
 
 # Build a happy little message folloewd by a newline
-buf = 'A'*3000 + 'B'*4 + 'C'*100
+buf = 'A'*146 + 'B'*4 + 'C'*10
 buf += badchars
 buf += 'Python Script'
 buf += '\n'

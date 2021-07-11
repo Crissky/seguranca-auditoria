@@ -3,7 +3,7 @@ import socket
 
 def send_message(string_message):    
     # Set up IP and PORT we1re connecting to
-    RHOST = '127.0.0.1'
+    RHOST = '192.168.0.106'
     RPORT = 31337
 
     # Create a TCP connection (socket)
@@ -20,4 +20,4 @@ def send_message(string_message):
     data = s.recv(1024)
 
     # Print out what we received
-    print f'Received: {}'.format(data)
+    print 'Received: {}'.format(data)
