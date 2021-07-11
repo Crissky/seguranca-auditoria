@@ -1,3 +1,7 @@
+.*
+!/.gitignore
 *.crt
 *.key
 *.csr
+*.ova
+*.iso
