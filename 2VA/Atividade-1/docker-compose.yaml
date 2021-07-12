@@ -1,5 +1,3 @@
-# mongodb+srv://admin:123456@localhost/?retryWrites=true&w=majority
-# mongodb+srv://usuario_1:<password>@cluster0.4czrq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 version: '3'
 
 services:
