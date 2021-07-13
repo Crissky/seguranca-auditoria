@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "atividade-3"
+version = "0.1.0"
+description = ""
+authors = ["Crissky <pg2006pe@hotmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+beautifulsoup4 = "4.9.3"
+requests = "2.25.1"
+
+[tool.poetry.dev-dependencies]
+autopep8 = "^1.5.7"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

