@@ -5,26 +5,26 @@
 
     form1.addEventListener('submit', function($event) {
         $event.preventDefault();
-        var myForm = $event.target;
-        var event = new CustomEvent('message', { detail: myForm });
-        window.parent.document.dispatchEvent(event);
+        window.parent.document.dispatchEvent(
+            new CustomEvent('message', { detail: $event.target })
+        );
     });
 
     form2.addEventListener('submit', function($event) {
         $event.preventDefault();
-        var myForm = $event.target;
-        var event = new CustomEvent('message', { detail: myForm });
-        window.parent.document.dispatchEvent(event);
+        window.parent.document.dispatchEvent(
+            new CustomEvent('message', { detail: $event.target })
+        );
     });
     
     window.parent.document.addEventListener('message', function($event) {
         var formElement = $event.detail;
-        var textoArea = formElement.querySelector('input').value;
+        var textArea = formElement.querySelector('input').value;
 
         if(formElement.id === 'frame1') {
-            framesArray[1].document.querySelector('form input').value = textoArea;
+            framesArray[1].document.querySelector('form input').value = textArea;
         } else {
-            framesArray[0].document.querySelector('form input').value = textoArea;
+            framesArray[0].document.querySelector('form input').value = textArea;
         }
     });
 })();
